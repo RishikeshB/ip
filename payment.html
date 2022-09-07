@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="icon" href="https://cdn-icons.flaticon.com/png/512/3687/premium/3687425.png?token=exp=1653645533~hmac=4cfc7d9b433a991645b0d0d085ac4e40" type="image/icon type">
+	<link rel="stylesheet" href="payment.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans&family=Ms+Madi&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+.btn-cancel {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+#MyForm{
+  display: none;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 14px;
+    background: #ececec;
+} 
+	* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+    	#header {
+    		font-family: 'Dosis';
+    		background-color: #0c9299;
+    		padding: 12px;
+    		padding-bottom: 6px;
+    	}
+    	#header > #logo {
+    		position: relative;
+    		padding: 34px;
+    		padding-left: 25px;
+    		/*padding-right: -10px;*/
+    		font-size: 30px;
+    		top: 0px;
+    	}
+    	#header > #logoname {
+    		margin-right: -35px;
+    		top: -12px;
+    		font-size: 30px;
+    		position: relative;
+    		left: 0px;
+    	}
+    	#header > #headerlink {
+    		position: relative;
+    		padding: 0 10px;
+    		font-size: 20px;
+    		top: -22px;
+    		left: 73%;
+    		margin-right: -7px;
+    		margin-left: 8px;
+    	}
+    	#header > #profile {
+    		position: relative;
+    		top: -10px;
+    		left: 74%;
+    	}
+    	#header > #profile img {
+    		position: relative;
+    		margin-left: -5px;
+    		top: 0px;
+    		left: 6px;
+    		height: 35px;
+    		width: 35px;
+    	}
+    	#navbar button{
+    		margin-top: 10px;
+			background-color: #0c9299;
+			border: 3px solid darkblue;
+			border-radius: 10px;
+			width: 250px;
+			padding: 0;
+			margin-left: 25px;
+		}
+		#navbar img{
+			left: 0px;
+			margin-right: 10px;
+			height: 55px;
+			width: 55px;
+			vertical-align: middle;
+
+		}
+		#navbar span{
+			font-family: 'Dosis';
+			font-size: 20px;
+			color: white;
+			vertical-align: middle;
+		}
+		#footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			right: 0;
+    		font-size: 18px;
+    		font-family: 'Dosis';
+    		vertical-align: middle;
+    		background-color: #17a971;
+    		height: 70px;
+    	}
+		#header {
+    		font-family: 'Dosis';
+    		background-color: brown;
+    		padding: 12px;
+    		padding-bottom: 0px;
+			margin-bottom: 30px;
+    	}
+		#header > #logoname {
+    		margin-right: -35px;
+    		top: -12px;
+    		font-size: 30px;
+    		position: relative;
+    		left: 0px;
+			color: black;
+    	}
+		#footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			right: 0;
+  		font-size: 18px;
+  		font-family: 'Dosis';
+  		vertical-align: middle;
+  		background-color:brown;
+  		height: 70px;
+    	}
+		#header > #headerlink {
+    		position: relative;
+    		padding: 0 10px;
+    		font-size: 20px;
+    		top: -22px;
+    		left: 73%;
+    		margin-right: -7px;
+    		margin-left: 50px;
+    	}
+		#navbar button{
+    		margin-top: 10px;
+			background-color: brown;
+			border: 3px solid black;
+			border-radius: 10px;
+			width: 250px;
+			height: 61.6px;
+			padding: 15px;
+			margin-left: 25px;
+		}
+
+	</style>
+</head>
+<body style="background-color:rgb(238, 212, 162)">
+	<div id="header">
+		
+		<span id="logoname" style="color: white;text-shadow: 4px 1px 3px black;font-family: 'Josefin Sans';">RVPS AIRWAYS</span>
+		<span id="headerlink"><a href="home.html" style="color: white;">Home</a> | <a href="index.html" style="color: white;">Logout</a></span>
+		<span id="profile"><a href="#"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png"/></a></span>
+	</div>
+
+	<div id="navbar">
+		<nav>
+				<button onclick="location.href='bookTicket.html';" style="margin-left: 80px;"><span>Book Ticket</span></button>
+				<button onclick="location.href='myTransaction.html';"><span>Booking History</span></button>
+				<button onclick="location.href='ticketStatus.html';"><span>Ticket Status</span></button>
+				<button onclick="location.href='cancellation.html';"><span>Cancel Ticket</span></button>
+				<button onclick="location.href='trainCalendar.html';"><span>Search Flight</span></button>
+		</nav>
+	</div>
+	<div style="margin-top: 50px;" align="center">
+	<h1 align="center" style="margin-bottom: 20px;">Welcome To Payment</h1>
+
+<details>
+  <summary style="font-size:20px"><bold>Card Payment</bold></summary>
+ 
+		<form action="/action_page.php">
+	    
+	        <div id="myForm" class="container">
+	            <form action="/action_page.php" class="form-container">
+	              <label for="name">Name:</label>
+	              <input type="text" id="name" name="name" value="John"><br><br>
+	              <label for="tname">Card Number:</label>
+	              <input type="text" id="tname" name="tname" value="Doe"><br><br>
+	              
+	                <lable for="exdate">Expiry Date</lable>
+	                <select id="month" name="month" required>
+	                    <option value="0" selected>January</option>
+	                    <option value="1">February</option>
+	                    <option value="2">March</option>
+	                    <option value="3">April</option>
+	                    <option value="4">May</option>
+	                    <option value="5">June</option>
+	                    <option value="6">July</option>
+	                    <option value="7">August</option>
+	                    <option value="8">September</option>
+	                    <option value="9">October</option>
+	                    <option value="10">November</option>
+	                    <option value="11">December</option>
+	                </select>
+	                
+	                <select id="year" name="year">
+	                    <option value="0" selected>2018</option>
+	                    <option value="1">2019</option>
+	                    <option value="2">2020</option>
+	                    <option value="3">2021</option>
+	                    <option value="4">2022</option>
+	                    <option value="5">2023</option>
+	                    <option value="6">2024</option>
+	                    <option value="7">2025</option>
+	                    <option value="8">2026</option>
+	                    <option value="9">2027</option>
+	                    <option value="10">2028</option>
+	                    <option value="11">2029</option>
+	                    <option value="11">2030</option>
+	                    <option value="11">2031</option>
+	                    <option value="11">2032</option>
+	                    <option value="11">2033</option>
+	                </select><br><br>
+           
+	              <label for="tnumber">CVV:</label>
+	              <input type="text" id="tnumber" name="tnumber" value="Doe"><br><br>
+				  <label for="tnumber">Cash amount:</label>
+	              <input type="text" id="tnumber" name="tnumber" value="$15,000"><br><br>
+	              
+	        
+	              
+				<input type="button"  onclick="addTicket()" value="Done" class="btn" />
+	            <button type="button" class="btn-cancel" onclick="closeForm()">Reset</button>
+
+	    	</div>
+    </form>
+    
+ </details>
+ <details>
+    <summary style="font-size:20px"><bold>App Payment</bold></summary>
+    
+ 
+		<form action="/action_page.php">
+	    
+	        <div id="myForm" class="container">
+	            <form action="/action_page.php" class="form-container">
+	              <label for="name">Name:</label>
+	              <input type="text" id="name" name="name" value="John"><br><br>
+	              <label for="tname">UPI ID:</label>
+	              <input type="text" id="tname" name="tname" value="Doe"><br><br>
+	              
+	                
+	              
+				<input type="button"  onclick="addTicket()" value="Done" class="btn" />
+	            <button type="button" class="btn-cancel" onclick="closeForm()">Reset</button>
+
+	    	</div>
+    </form>
+</details>
+
+
+	</div>
+	
+
+	<div id="footer" style="padding-top: 25px;">
+		<span style="margin-right: 500px; margin-left: 50px; font-family: 'Times New Roman';vertical-align: middle;">&copy copyrights</span> <span style="margin-right: 500px;"><a href="#" style="color: white;">About Us</a> | <a href="#" style="color: white;">FAQ</a> | <a href="#" style="color: white">Contact Us</a></span><span>Designed by RVPS Team</span>
+	</div>
+
+
+
+
+	<script>
+		function addTicket() {
+			if(confirm("Payment successfull!!")) {
+				window.open("home.html");
+			}
+			else {
+				window.open("payment.html");
+			}
+
+		}
+		function closeForm() {
+			window.open("payment.html");
+		}
+
+		
+
+
+
+
+	</script>
+</body>
+</html>
+
+

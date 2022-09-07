@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="https://cdn-icons.flaticon.com/png/512/3687/premium/3687425.png?token=exp=1653645533~hmac=4cfc7d9b433a991645b0d0d085ac4e40" type="image/icon type">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans&family=Ms+Madi&display=swap" rel="stylesheet">
+	<style type="text/css">
+	* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+    	#header {
+    		font-family: 'Dosis';
+    		background-color: brown;
+    		padding: 12px;
+    		padding-bottom: 6px;
+    	}
+    	#header > #logo {
+    		position: relative;
+    		padding: 34px;
+    		padding-left: 25px;
+    		/*padding-right: -10px;*/
+    		font-size: 30px;
+    		top: 0px;
+    	}
+    	#header > #logoname {
+    		margin-right: -35px;
+    		top: -12px;
+    		font-size: 30px;
+    		position: relative;
+    		left: 0px;
+    	}
+    	#header > #headerlink {
+    		position: relative;
+    		padding: 0 10px;
+    		font-size: 20px;
+    		top: -22px;
+    		left: 75%;
+    		margin-right: -7px;
+    		margin-left: 8px;
+    	}
+    	/*#header > #profile {
+    		position: relative;
+    		top: -10px;
+    		left: 74%;
+    	}
+    	#header > #profile img {
+    		position: relative;
+    		margin-left: -5px;
+    		top: 0px;
+    		left: 6px;
+    		height: 35px;
+    		width: 35px;
+    	}*/
+
+    	#title{
+    		font-family: 'Dosis';
+    		font-size: 60px;
+    		color: brown;
+    		background-color: burlywood;
+    	}
+    	td,th{
+    		padding: 10px;
+    	}
+	</style>
+</head>
+<body>
+	<div id="header" style="padding-top: 30px;">
+		<!-- <span id="logo"><a href="#"><img src="https://static.vecteezy.com/system/resources/thumbnails/000/620/713/small/aviation_logo-14.jpg"/></a></span> -->
+		<span id="logoname" style="color: white;text-shadow: 4px 1px 3px black;font-family: 'Josefin Sans';">RVPS Airways</span>
+		<span id="headerlink"><a href="ahome.html" style="color: white;">Home</a> | <a href="index.html" style="color: white;">Logout</a></span>
+		<!-- <span id="profile"><a href="#"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png"/></a></span> -->
+	</div>
+	<div id="title" align="center" >View Flights</div>
+	<form style="margin-top: 20px;" name="searchForm">
+		<span class="search">
+			<label for="source" style="margin-left:350px;color: brown;font-family: 'Dosis';font-size: 30px;"> Source: </label>
+			<select id="source" name="src" required style="padding: 10px; width: 18%;">
+				<option value="" disable selected hidden>Choose Source</option>
+				<option value="Chennai">Chennai</option>
+		        <option value="Cbe">Coimbatore</option>
+		        <option value="Erode">Erode</option>
+		        <option value="Tirupur">Tirupur</option>
+		        <option value="Bengalore">Bengalore</option>
+		        <option value="Madurai">Madurai</option> 
+		    </select>
+		</span>
+
+	    <span class="search1">
+	    	<label for="dest" style="margin-left:100px;color: brown;font-family: 'Dosis'; font-size: 30px;"> Destination: </label>
+			<select id="dest" name="dest" required style="padding: 10px; width: 18%;">
+				<option value="" disable selected hidden>Choose Destination</option>
+				<option value="Chennai">Chennai</option>
+		        <option value="Cbe">Coimbatore</option>
+		        <option value="Erode">Erode</option>
+		        <option value="Tirupur">Tirupur</option>
+		        <option value="Bengalore">Bengalore</option>
+		        <option value="Madurai">Madurai</option>
+			</select>
+	    </span>
+	    <div style="text-align: center; margin-top: 20px;margin-bottom: 20px;">
+	  	<button type="submit" class="submit" style="border: 3px solid black;border-radius: 5px;padding: 10px; background-color: brown;font-size: 15px;color: white;" onclick ="searchTrain()">Submit</button>
+	  </div>
+	</form>
+<!-- 	<table border="2" cellspacing="3" cellpadding="8" bordercolor="Blue" style="margin-left:350px;text-align: center;">
+		<tr>
+			<th>Ticket Number</th>
+			<th>Train Id</th>
+			<th>Train Name</th>
+			<th>Source</th>
+			<th>Destination</th>
+			<th>Date of Travel</th>			
+			<th>No. of Seats</th>
+			<th>Status</th>
+		</tr>
+	    <tr>
+	    	<td>1001</td>
+	    	<td>123</td>
+			<td>Chennai Express</td>
+			<td>Chennai</td>
+			<td>Bengalore</td>
+			<td>1-6-2022</td>
+			<td>72</td>
+			<td></td>
+		</tr>
+	</table> -->
+	<script type="text/javascript">
+		function searchTrain() {
+			window.alert("inside searchTrain()");
+			var xhttp;
+			var src = document.searchForm.src.value;
+			var dest = document.searchForm.dest.value;
+			var url = "SearchTrain1?source="+src+"&destination="+dest;
+			alert(src + dest + url);
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				// alert("inside xhttp");
+				if (this.readyState == 4 && this.status == 200) {
+					// alert("inside if");
+					var val = this.responseText;
+					// alert(val);
+					console.log("run");
+					document.getElementById('Submitbtn').remove();
+					document.getElementById("add-table-here").innerHTML = val; 
+				}
+				// var val = xhttp.responseText;
+				// document.getElementById('add-table-here').innerHTML += val;
+			};
+			xhttp.open("GET", url, false);
+			xhttp.send();
+		}
+	</script>
+</body>
+</html>
